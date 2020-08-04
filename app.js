@@ -3,5 +3,9 @@ const about = document.querySelector('.about');
 const articles = document.querySelectorAll('.content');
 
 about.addEventListener('click', (e) => {
-  console.log(e.target.dataset.id);
+  const id = e.target.dataset.id;
+  btns.forEach((btn) => {
+    btn.classList.remove('active');
+    e.target.classList.add('active');
+  });
 });
